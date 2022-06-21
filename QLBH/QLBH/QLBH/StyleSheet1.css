@@ -1,0 +1,51 @@
+﻿html, body {
+    width:100%;
+}
+.container {
+    width:100%;
+}
+.menu {
+    width:100%;
+    height:40px;
+    background-color:brown;
+    text-align:center;
+}
+    .menu a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px;
+        color: white;
+        font-size:20px;
+    }
+        .menu a:hover {
+            font-weight:bold;
+        }
+.banner {
+    width:100%;
+    height:300px;
+    background-color:blueviolet;
+}
+.left {
+    width:15%;
+    height:400px;
+    background-color:aqua;
+    float:left;
+}
+.left a{
+    color:black;
+}
+.right {
+    width: 25%;
+    height: 400px;
+    background-color:burlywood;
+    float:right;
+}
+footer {
+    clear:both;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align:center;
+    font-size:30px;
+}

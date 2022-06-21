@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="QLBH.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Style.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="menu">
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/trangchu.aspx">Trang Chủ</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/sanpham.aspx">Sản Phẩm</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server">Dịch vụ</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink4" runat="server">Liên hệ</asp:HyperLink>
+            </div>
+            <div class="banner"></div>
+            <div class="left">
+                <h2>Danh mục</h2>
+                <p>
+                    <asp:DataList ID="DataList1" runat="server">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Eval("TenLoai") %>' CommandArgument='<%# Eval("MaLoai") %>' OnClick="LinkButton1_Click"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:DataList>
+                </p>
+
+            </div>
+            <div class="right">
+                <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate"></asp:Login>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                Nguyễn Văn Tí
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
